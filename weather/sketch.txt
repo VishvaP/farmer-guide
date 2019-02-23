@@ -1,0 +1,74 @@
+var weather;
+
+var api = 'https://api.openweathermap.org/data/2.5/weather?q=';
+
+
+
+var apikey = '&APPID=6a321fcdd6adc1979d1cdb01fa2ee630';
+
+var input;
+
+
+
+function setup() {
+
+  createCanvas(400, 400);
+
+  var button = select('#submit');
+
+  button.mousePressed(weatherAsk);
+
+  input = select('#city');
+
+}
+
+  function weatherAsk()
+
+  {
+
+  var url = api + input.value() + apikey;
+
+  loadJSON(url,gotData);
+
+  }
+
+  
+
+
+
+function gotData(data) {
+
+  weather = data;
+
+}
+
+function draw()
+
+
+
+  {
+
+	   if(weather)
+
+      {
+
+      var temp = weather.main.temp;
+			var pressure = weather.main.pressure
+      var humidity = weather.main.humidity;
+			var temp_min = weather.main.temp_min;
+			var temp_max = weather.main.temp_max;
+
+      print(temp);
+			print(pressure);
+      print(humidity);
+			print(temp_min);
+			print(temp_max);
+      
+
+      }
+
+    
+
+  }
+
+  
