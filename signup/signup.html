@@ -15,37 +15,74 @@
 
   <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="../css/style.css">
 
   
 </head>
 
 <body>
-    
-  
+    <header class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a> 
+                <a id="logo" class="pull-left" href="../index.php"></a>
+                        <div class="nav-collapse collapse pull-right">
+                            <ul class="nav">
+                                <li><a href="../index.php">Home</a></li>
+                                <li><a href="../about-us.php">About Us</a></li>
+                                <li ><a href="../weather.php">Weather Forecast</a></li>
+                                <li><a href="../prices/prices.php">Market Prices</a></li>
+                                <li class="active"><a href="../signup/signup.html">Register</a></li>
+                                <li><a href="../login/login.html">Sign In</a></li>
+                                <li><a href="../contact-us.php">Contact Us</a></li>
+                            </ul>        
+                        </div>
+            </div>
+        </div>
+    </header>
+  </header>
+  <section class="title">
+          <div class="container">
+              <div class="row-fluid">
+                  <div class="span6">
+                      <h1>Registration</h1>
+                  </div>
+                  <div class="span6">
+                      <ul class="breadcrumb pull-right">
+                          <li><a href="../index.php">Home</a> <span class="divider">/</span></li>
+                          <li class="active">Registration</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </section>
 <div class="container">
   <form action="signup.php" method="POST">
-    <div class="row">
+      <center>
+      <div class="row">
       <h2>Account</h2>
       <div class="input-group input-group-icon">
         <input type="text" placeholder="First Name" name="fname" required/>
-        <div class="input-icon"><i class="fa fa-user"></i></div>
       </div>
       <div class="input-group input-group-icon">
           <input type="text" placeholder="Middle Name" name="mname" required/>
-          <div class="input-icon"><i class="fa fa-user"></i></div>
+          
         </div>
         <div class="input-group input-group-icon">
             <input type="text" placeholder="Last Name" name="lname" required/>
-            <div class="input-icon"><i class="fa fa-user"></i></div>
+            
           </div>
           <div class="input-group input-group-icon">
               <input type="email" placeholder="Email Address" name="email" required/>
-              <div class="input-icon"><i class="fa fa-envelope"></i></div>
+              
             </div>
             <div class="input-group input-group-icon">
                 <input type="number" placeholder="Mobile Number" name="mob" required/>
-                <div class="input-icon"><i class="fa fa-phone"></i></div>
+                
               </div>
           <div class="input-group">
             <div class="col-12 col-6">
@@ -63,42 +100,100 @@
           <br>
           <div class="input-group input-group-icon">
               <input type="text" placeholder="District" name="dist" required/>
-              <div class="input-icon"><i class="fa fa-map-marker"></i></div>
+              
             </div>
             <div class="input-group input-group-icon">
                 <input type="text" placeholder="State" name="state" required/>
-                <div class="input-icon"><i class="fa fa-map-marker"></i></div>
+              
               </div>
       <div class="input-group input-group-icon">
         <input type="password" placeholder="Password" name="pass" required/>
-        <div class="input-icon"><i class="fa fa-key"></i></div>
+        
       </div>
       <div class="input-group input-group-icon">
           <input type="password" placeholder="Retype Password" name="repass" required/>
-          <div class="input-icon"><i class="fa fa-key"></i></div>
+          
         </div>
     </div>
     <div class="row">
       <h4>Terms and Conditions</h4>
       <div class="input-group">
-        <input type="checkbox" id="terms" required/>
-        <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+          <label for="terms"><input type="checkbox" id="terms" required/>
+        I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
       </div>
     </div>
     <div class="row">
       <div class="input-group">
-        <center>
+        
           <button type="submit">Register!</button>
-        </center>
+      
       </div>
     </div>
+  </center>
   </form>
 </div>
+
+<section id="bottom" class="main">
+        
+    <div class="container">
+        
+        <div class="row-fluid">
+            
+            <div class="span6">
+                <h4>CONTACT US</h4>
+                <ul class="unstyled address">
+                    <li>
+                        <i class="icon-envelope"></i>
+                        <strong>Email: </strong> <a href="mailto:company@domain.com">company@domain.com</a>
+                    </li>
+                    <li>
+                        <i class="icon-globe"></i>
+                        <strong>Website:</strong> <a href="http://www.domain.com">www.domain.com</a>
+                    </li>
+                    <li>
+                        <i class="icon-phone"></i>
+                        <strong>Telephone:</strong> 123-456-7890
+                    </li>
+                </ul>
+            </div>
+            
+            <div id="tweets" class="span6">
+                <h4>Krishi Udaan</h4>
+                <div>
+                        <ul class="arrow">
+                        <li ><a href="../index.php">Home</a></li>
+                        <li><a href="../about-us.php">About Us</a></li>
+                        <li ><a href="../weather.php">Weather Forecast</a></li>
+                        <li><a href="../prices/prices.php">Market Prices</a></li>
+                        <li><a href="../signup/signup.html">Register</a></li>
+                        <li><a href="../login/login.html">Sign In</a></li>
+                        <li><a href="../contact-us.php">Contact Us</a></li>
+                        </ul>
+                    </div>  
+            </div>
+            
+        </div>
+    
+    </div>
+    
+</section>
+
+<footer id="footer">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span11 cp ">
+                <center>&copy; 2019 <a target="_blank" href="http://www.domain.com/">Krishi Udaan</a>. All Rights Reserved.
+                </center>
+            </div>
+            <div class="span1">
+                <a id="gototop" class="gototop pull-right" href="#"><i class="icon-angle-up"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-  
-
-    <script  src="js/index.js"></script>
+  <script  src="js/index.js"></script>
 
 
 

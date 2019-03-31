@@ -384,11 +384,13 @@ header .dropdown-menu:before {
 
 .main-info {
     background-color: #fff;
-    color: #999
+    color: #938b8b
+
 }
 
 .main-info h4 {
-    color: #999
+    background-color: #2dcc70;
+    color: #fff
 }
 
 .icon-medium {
