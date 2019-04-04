@@ -84,29 +84,29 @@
 <section id="data">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
-<?php
-require 'httprequest-master/class-http-request.php';
-$request = new HttpRequest();
-$request->setUrl('https://api.airvisual.com/v2/nearest_city');
-$request->setMethod(HTTP_METH_GET);
-
-$request->setQueryData(array(
-  'key' => 'sHLntHoQtaYrN7DgX'
-));
-
-$request->setHeaders(array(
-  'Postman-Token' => '632f0a9a-14d8-4806-8ff3-4cd5eab17567',
-  'cache-control' => 'no-cache'
-));
-
-try {
-  $response = $request->send();
-
-  echo $response->getBody();
-} catch (HttpException $ex) {
-  echo $ex;
-}
-?>
+<script>
+    function arrayToTable(tableData) {
+        var table = $('<div class="container"><center><table></table></center></div>');
+        $(tableData).each(function (i, rowData) {
+            var row = $('<tr></tr>');
+            $(rowData).each(function (j, cellData) {
+                row.append($('<td>'+cellData+'</td>'));
+            });
+            table.append(row);
+        });
+        return table;
+    }
+    $.ajax({
+        type: "GET",
+        
+		url: "rainfall_in_india_1901-2015.csv",
+        success:  function (data) {
+            
+            $('#data').append(arrayToTable(Papa.parse(data).data));
+            
+        }
+    });
+</script>
 </section>
 
     <section id="bottom" class="main">
